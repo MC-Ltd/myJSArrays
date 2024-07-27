@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Перевірка, чи зберігся режим у localStorage
 	const savedLanguage = localStorage.getItem('language');
-	if (savedLanguage) {
-	} else {
+	if (savedLanguage === null) {
+	//} else {
 		savedLanguage = 'en';
 	}
 
