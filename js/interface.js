@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		savedLanguage = 'en';
 	}
 
-	fetch('/json/interface.json')
+	fetch('./json/interface.json')
 		.then(response => response.json())
 		.then(data => {
 			populateLanguageSwitcher(data.languages);
