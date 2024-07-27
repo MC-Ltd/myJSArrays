@@ -7,6 +7,10 @@
 		"ua": {
 			"name": "Українська",
 			"flag": "./flags/ua.svg"
+		},
+		"pl": {
+			"name": "Polski",
+			"flag": "./flags/pl.svg"
 		}
 	},
 	"tagsIDs": {
@@ -18,15 +22,23 @@
 			"ua": {
 				"text": "таблиця горизонтально",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "stół jest poziomy",
+				"tooltip": ""
 			}
 		},
 		"buttonFillArray": {
 			"en": {
-				"text": "Fill array",
+				"text": "Fill the array",
 				"tooltip": ""
 			},
 			"ua": {
 				"text": "Заповнити масив",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Wypełnij tablicę",
 				"tooltip": ""
 			}
 		},
@@ -38,6 +50,10 @@
 			"ua": {
 				"text": "Заповнити масив послідовними числами",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "Wypełnij tablicę kolejnymi liczbami",
+				"tooltip": ""
 			}
 		},
 		"buttonFillByRandomNumbers": {
@@ -47,6 +63,10 @@
 			},
 			"ua": {
 				"text": "Заповнити масив випадковими числами",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Wypełnij tablicę losowymi liczbami",
 				"tooltip": ""
 			}
 		},
@@ -58,6 +78,10 @@
 			"ua": {
 				"text": "Заповнити масив послідовними літерами",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "Wypełnij tablicę kolejnymi literami",
+				"tooltip": ""
 			}
 		},
 		"buttonFillByRandomLetters": {
@@ -67,6 +91,10 @@
 			},
 			"ua": {
 				"text": "Заповнити масив випадковими літерами",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Wypełnij tablicę losowymi literami",
 				"tooltip": ""
 			}
 		},
@@ -78,6 +106,10 @@
 			"ua": {
 				"text": "Цей метод додає один елемент або кілька елементів в кінець масиву (з правого краю).",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda dodaje jeden lub więcej elementów na końcu tablicy (od prawej krawędzi).",
+				"tooltip": ""
 			}
 		},
 		"pArrayPop": {
@@ -87,6 +119,10 @@
 			},
 			"ua": {
 				"text": "Цей метод видаляє останній (крайній правий) елемент масиву. Лише один елемент!!!",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda usuwa ostatni (skrajny na prawo) element tablicy. Tylko jeden przedmiot!!!",
 				"tooltip": ""
 			}
 		},
@@ -98,6 +134,10 @@
 			"ua": {
 				"text": "Цей метод додає один елемент або кілька елементів на початок масиву (з лівого краю).",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda dodaje jeden lub więcej elementów na początek tablicy (od lewej krawędzi).",
+				"tooltip": ""
 			}
 		},
 		"pArrayShift": {
@@ -107,6 +147,10 @@
 			},
 			"ua": {
 				"text": "Цей метод видаляє початковий (крайній лівий) елемент масиву. Лише один елемент!!!",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda usuwa początkowy (skrajny lewy) element tablicy. Tylko jeden przedmiot!!!",
 				"tooltip": ""
 			}
 		},
@@ -118,16 +162,24 @@
 			"ua": {
 				"text": "Цей метод виконує сортування масиву. Якщо виклтикати цей метод без параметрів, тоді всі елементи сортуються так, ніби кожен елемент масиву є рядком.",
 				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda sortuje tablicę. Jeśli wywołasz tę metodę bez parametrów, wszystkie elementy zostaną posortowane tak, jakby każdy element tablicy był ciągiem znaków.",
+				"tooltip": ""
 			}
 		},
 		"pArrayReverse": {
 			"en": {
-				"text": "This method flips the array backwards.",
+				"text": "This method flips the array backward.",
 				"tooltip": ""
 			},
 			"ua": {
-				"text": "",
-				"tooltip": "Цей метод перевертає масив задом на перед."
+				"text": "Цей метод перевертає масив задом на перед.",
+				"tooltip": ""
+			},
+			"pl": {
+				"text": "Ta metoda odwraca tablicę do tyłu.",
+				"tooltip": ""
 			}
 		},
 		"!!!": {
