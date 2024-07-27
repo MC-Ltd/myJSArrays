@@ -2,11 +2,11 @@
 	"languages": {
 		"en": {
 			"name": "English",
-			"flag": "flags/gb.svg"
+			"flag": "./flags/gb.svg"
 		},
 		"ua": {
 			"name": "Українська",
-			"flag": "flags/ua.svg"
+			"flag": "./flags/ua.svg"
 		}
 	},
 	"tagsIDs": {
