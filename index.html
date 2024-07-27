@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/interface.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+	<!-- Windows XP Theme -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/xp.css"> -->
+	<!-- Windows 98 Theme -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/xp.css@/dist/98.css"> -->
+	<!-- <link rel="stylesheet" href="https://unpkg.com/7.css" />
+	<link rel="stylesheet" href="/css/styleWin10.css"> -->
+	<title>JS Arrays</title>
+<!-- 
+Switch to Dark Mode
+https://codepen.io/Umer_Farooq/pen/eYJgKGN
+
+https://fontawesome.com/v5/search?o=r&m=free
+
+flags
+https://flagicons.lipis.dev/
+ -->
+</head>
+<body>
+	<header>
+		<div class="headerMenu">
+			<div class="container" onclick="myFunction(this)">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+
+		<div class="headerOrientation">
+			<input type="checkbox" id="inputTableOrientation" class="" name="inputTableOrientation" checked="true">
+			<label for="inputTableOrientation" id="labelTableOrientation" class="" name="">table horizontal</label>
+		</div>
+
+		<div class="headerLanguages">
+			<div class="language-switcher">
+				<select id="selectLanguage">
+					<!-- <option value="en" data-flag="flags/gb.svg">English</option>
+					<option value="uk" data-flag="flags/ua.svg">Українська</option> -->
+				</select>
+			</div>
+		</div>
+
+		<div class="headerDarkMode">
+			<div>
+				<!-- <button id="buttonModeToggle">Switch to Dark Mode</button> -->
+				<input type="checkbox" id="inputDarkMode" class="checkboxDarkMode">
+				<label for="inputDarkMode" class="checkboxDarkMode-label">
+					<!-- font-awesome -->
+					<i class="fas fa-moon"></i>
+					<i class="fas fa-sun"></i>
+					<span class="ball"></span>
+				</label>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+
+
+		<div id="divCode" class="classMonospace" name="">
+		</div>
+
+		<div id="divTable" class="classMonospace" name="">
+			<table id="tableArray" class="" name="">
+			</table>
+		</div>
+
+		<!-- Tab links -->
+		<div class="classTabs classMonospace">
+			<button id="buttonFillArray" class="classTabLinks" onclick="openTab(event, 'Fill array')">Fill array</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, `arr[i]`)">arr[i]</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.length')">.length</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.push()')">.push()</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.pop()')">.pop()</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.unshift()')">.unshift()</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.shift()')">.shift()</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.sort()')">.sort()</button>
+			<button id="" class="classTabLinks" onclick="openTab(event, '.reverse()')">.reverse()</button>
+		</div>
+		
+		<!-- Tab content -->
+		<div id="Fill array" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<button id="buttonFillByConsecutiveNumbers" class="classButton" name="" onclick="arrMain_FillByConsecutiveNumbers()">arrMain_FillByConsecutiveNumbers()</button><br>
+			<button id="buttonFillByRandomNumbers" class="classButton" name="" onclick="arrMain_FillByRandomNumbers()">arrMain_FillByRandomNumbers()</button><br>
+			<button id="buttonFillByConsecutiveLetters" class="classButton" name="" onclick="arrMain_FillByConsecutiveLetters()">arrMain_FillByConsecutiveLetters()</button><br>
+			<button id="buttonFillByRandomLetters" class="classButton" name="" onclick="arrMain_FillByRandomLetters()">arrMain_FillByRandomLetters()</button>
+		</div>
+
+		<div id="arr[i]" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+
+			<label for="inputArrIndex" id="labelArrIndex1" class="" name="">arr[</label>
+			<input type="number" id="inputArrIndex" class="" name="inputArrIndex" min="0" max="26" value="0">
+			<label for="inputArrIndex" id="labelArrIndex2" class="" name="">] = </label>
+			<input type="text" id="inputArrayValue" class="" name="">
+			<br>
+			<label for="inputArrAt" id="labelArrAt" class="" name="">arr.at(</label>
+			<input type="number" id="inputArrAt" class="" name="inputArrAt" min="-26" max="-1" value="-1">
+		</div>
+		
+		<div id=".length" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+
+			<label for="inputArrLength" id="labelArrLength" class="" name="">arr.length = </label>
+			<input type="number" id="inputArrLength" class="" name="inputArrLength" min="0" max="26" value="0">
+		</div>
+		
+		<div id=".push()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+
+			<p id="pArrayPush" class="" name=""></p><br>
+			<button id="buttonArrayPush" class="classButton" name="" onclick="arrMain_push()">.push()</button>
+		</div>
+		
+		<div id=".pop()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<p id="pArrayPop" class="" name=""></p><br>
+			<button id="buttonArrayPop" class="classButton" name="" onclick="arrMain_pop()">.pop()</button>
+		</div>
+
+		<div id=".unshift()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<p id="pArrayUnshift" class="" name=""></p><br>
+			<button id="buttonArrayUnshift" class="classButton" name="" onclick="arrMain_unshift()">.unshift()</button>
+		</div>
+		
+		<div id=".shift()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<p id="pArrayShift" class="" name=""></p><br>
+			<button id="buttonArrayShift" class="classButton" name="" onclick="arrMain_shift()">.shift()</button>
+		</div>
+
+		
+		<div id=".sort()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<p id="pArraySort" class="" name=""></p><br>
+			<button id="buttonArraySort" class="classButton" name="" onclick="arrMain_sort()">.sort()</button>
+		</div>
+		
+		<div id=".reverse()" class="classTabContent">
+			<span onclick="this.parentElement.style.display='none'" class="classTopRight">&times</span>
+			
+			<p id="pArrayReverse" class="" name=""></p><br>
+			<button id="buttonArrayReverse" class="classButton" name="" onclick="arrMain_reverse()">.reverse()</button>
+		</div>
+	</div>
+
+	<footer>
+		<div id="" class="footer-left" name="">
+			<p id="pVersion" class="classMonospace"></p>
+		</div>
+		<div id="" class="footer-right" name="">
+			<!-- <div class="footer-content"> -->
+			<p class="classMonospace">
+				&copy; 2024 MC Ltd. All rights reserved
+				<!-- <a href="mailto:mcltd0@gmail.com">✉</a> -->
+				<a href="mailto:mcltd0@gmail.com"><i class="far fa-envelope"></i></a>
+				<!-- <i class="far fa-envelope"></i> -->
+			</p>
+			<!-- </div> -->
+		</div>
+	</footer>
+
+	<script src="/js/interface.js"></script>
+	<script src="/js/main.js"></script>
+</body>
+</html>

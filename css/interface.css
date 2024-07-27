@@ -1,0 +1,356 @@
+/* ================================================================================ */
+/* Обнуление / start */
+/* ================================================================================ */
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+.bigred{
+	font-size: 20px;
+	color: red;
+}
+/* ================================================================================ */
+/* Обнуление / end */
+/* ================================================================================ */
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+
+:root {
+	--bg-color: #FFFFFF;
+	--text-color: #000000;
+	--header-footer-bg-color: #c5c5c5;
+	--header-footer-text-color: #333333;
+	/* --table-cell-bg-color: #FFFFFF;
+	--table-cell-text-color: #000000;
+	--highlight-color: #FFD700; */
+}
+
+.dark-mode {
+	--bg-color: #121212;
+	--text-color: #FFFFFF;
+	--header-footer-bg-color: #1F1F1F;
+	--header-footer-text-color: #CCCCCC;
+	/* --table-cell-bg-color: #1E1E1E;
+	--table-cell-text-color: #FFFFFF;
+	--highlight-color: #FF8C00; */
+}
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+	transition: background-color 0.3s, color 0.3s;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+}
+
+
+.content {
+	flex: 1;
+	padding: 20px;
+}
+
+
+
+
+
+/* ================================================================================ */
+/* header / start */
+/* ================================================================================ */
+header {
+	display: flex;
+	justify-content: space-between;
+	height: 3.5em; /* Фіксована висота хедера */
+	padding: 0px;
+	background-color: var(--header-footer-bg-color);
+	color: var(--header-footer-text-color);
+	transition: background-color 0.3s, color 0.3s;	
+}
+
+header>div {
+	display: flex;
+	align-items: center;
+}
+
+.headerMenu {
+	flex: 1;
+	justify-content: center;
+}
+
+.headerOrientation {
+	flex: 4;
+	justify-content: center;
+}
+.headerLanguages {
+	flex: 2;
+	justify-content: center;
+}
+
+.headerDarkMode {
+	flex: 2;
+	justify-content: center;
+}
+/* ================================================================================ */
+/* header / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/* footer / start */
+/* ================================================================================ */
+footer {
+	display: flex;
+	padding: 0 0.5em;
+	height: 2em; /* Фіксована висота футера */
+	background-color: var(--header-footer-bg-color);
+	color: var(--header-footer-text-color);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-left {
+	flex: 1;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	font-size: 0.9em;
+}
+
+.footer-right {
+	flex: 2;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	font-size: 0.9em;
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* .footer-content p {
+	font-size: 2em;
+	margin: 5px 0;
+} */
+
+/* .social-icons {
+	margin: 10px 0;
+}
+
+.social-icons a {
+	color: var(--footer-text-color);
+	text-decoration: none;
+	margin: 0 10px;
+	font-size: 24px;
+	transition: color 0.3s;
+} */
+/* ================================================================================ */
+/* footer / end */
+/* ================================================================================ */
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+.classMonospace {
+	font-family: monospace;
+	/* font-size: 1em; */
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/* language-switcher / start */
+/* ================================================================================ */
+.language-switcher {
+	position: relative;
+	display: inline-block;
+}
+
+#selectLanguage {
+	padding: 5px 10px;
+	font-size: 12px;
+	cursor: pointer;
+	/* border: 1px solid #ccc; */
+	/* border-radius: 5px; */
+	/* background-color: #f1f1f1; */
+	background-color: var(--header-footer-bg-color);
+	color: var(--header-footer-text-color);
+	appearance: none;
+	/* background-image: url('flags/gb.svg'); */
+	background-repeat: no-repeat;
+	/* background-position: right 10px center; */
+	background-position: left 10px center;
+	/* background-position: center; */
+	padding-left: 40px; /* Збільшуємо лівий padding для прапора */
+	background-size: 20px;
+	width: 40px; /* Фіксована ширина для відображення лише прапора */
+}
+
+
+/* Приховуємо текст всередині select */
+#selectLanguage option {
+	text-indent: -9999px;
+	/* text-indent: 30px; /* Відступ для прапора */
+	/*height: 40px; /* Збільшуємо висоту опцій для відображення прапора */
+	/*padding-left: 30px; /* Відступ для тексту, щоб уникнути накладення з прапором */
+	/*background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: left center; */
+}
+
+
+/* Стилі для кожного прапора */
+/* #selectLanguage option[value="en"] {
+	background-image: url('flags/uk.svg');
+}
+
+#selectLanguage option[value="uk"] {
+	background-image: url('flags/ukraine.svg');
+} */
+
+
+
+
+/* ================================================================================ */
+/* language-switcher / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/* toggle Dark/Light mode / start */
+/* ================================================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.checkboxDarkMode {
+	opacity: 0;
+	position: absolute;
+}
+
+.checkboxDarkMode-label {
+	background-color: #111;
+	width: 50px;
+	height: 26px;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.fa-moon {
+	color: #f1c40f;
+}
+
+.fa-sun {
+	color: #f39c12;
+}
+
+.checkboxDarkMode-label .ball {
+	background-color: #fff;
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	border-radius: 50%;
+	transition: transform 0.2s linear;
+}
+
+.checkboxDarkMode:checked+.checkboxDarkMode-label .ball {
+	transform: translateX(24px);
+}
+
+/* ================================================================================ */
+/* toggle Dark/Light mode / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+.container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #c90b0b;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */

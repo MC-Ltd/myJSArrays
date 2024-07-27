@@ -1,0 +1,226 @@
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+#divCode {
+	border: 1px solid #ddd; /* Межі комірок */
+	padding: 8px; /* Відступ всередині комірок */
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+#divTable {
+	/* max-height: 400px; Висота області прокручування */
+	max-width: 100%; /* Ширина області прокручування */
+	overflow-y: auto; /* Вертикальний скролінг */
+	overflow-x: auto; /* Горизонтальний скролінг */
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+#tableArray {
+	width: 100%; /* Ширина таблиці */
+	border-collapse: collapse; /* Злиття меж таблиці */
+	margin: 5px 0;
+}
+#tableArray th, td {
+	border: 1px solid #ddd; /* Межі комірок */
+	padding: 8px; /* Відступ всередині комірок */
+	text-align: center; /* Горизонтальне вирівнювання по центру */
+	vertical-align: middle; /* Вертикальне вирівнювання по центру */
+
+}
+
+.selected-cell {
+	background-color: aqua;
+}
+
+.created-cell {
+	animation: colorChangeAfterCreation 2s forwards; /* Анімація зміни кольору протягом 2 секунд */
+}
+
+@keyframes colorChangeAfterCreation {
+	from {
+		background-color: green; /* Початковий колір */
+	}
+	to {
+		background-color: var(--table-cell-bg-color); /* Кінцевий колір */
+	}
+}
+
+.removing-cell {
+	overflow: hidden; /* Приховує вміст, що виходить за межі */
+	white-space: nowrap; /* Запобігає переносу тексту */
+	/* width: 15px; */
+	text-overflow: ellipsis; /* Додає три крапки, якщо текст виходить за межі */
+	animation: colorAndWidthBeforeRemoving 2s forwards; /* Анімація зміни кольору протягом 2 секунд */
+}
+
+@keyframes colorAndWidthBeforeRemoving {
+	from {
+		background-color: var(--table-cell-bg-color); /* Початковий колір */
+		/* width: 15px; Початкова ширина */
+	}
+	to {
+		background-color: red; /* Кінцевий колір */
+		/* width: 1px; Кінцева ширина */
+	}
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/* Style the tab / start */
+/* ================================================================================ */
+
+.classTabs {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
+/* .tabs { */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px; /* Додатковий відступ між кнопками */
+	/* padding: 10px; */
+}
+
+/* Style the buttons that are used to open the tab content */
+/* .classTab button {
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0.5em 1em;
+	transition: 0.3s;
+} */
+
+.classTabLinks {
+	flex: 1 1 auto; /* Дозволяє кнопкам розтягуватись і зменшуватись */
+	/* padding: 10px 20px; */
+	/*margin: 5px 0; /* Додає відступ між рядами кнопок */
+	text-align: center;
+	background-color: inherit;
+	padding: 6px 12px;
+	/* color: white; */
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+/* Change background color of buttons on hover */
+/* .classTab button:hover { */
+.classTabLinks:hover{
+	background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.classTabs button.active {
+	background-color: #ccc;
+}
+
+/* Style the tab content */
+.classTabContent {
+	display: none;
+	padding: 6px 12px;
+	border: 1px solid #ccc;
+	border-top: none;
+}
+
+.classTabContent {
+	animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+/* Style the close button */
+.classTopRight {
+	float: right;
+	cursor: pointer;
+	font-size: 28px;
+}
+
+.classTopRight:hover {color: red;}
+/* ================================================================================ */
+/* Style the tab / end */
+/* ================================================================================ */
+
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+.classButton {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 6px 14px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+	border-radius: 6px;
+	border: none;
+
+	background: #6E6D70;
+	box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+	color: #DFDEDF;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+.classButton:focus {
+	box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+	outline: 0;
+}
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+
+
+
+/* ================================================================================ */
+/*  / start */
+/* ================================================================================ */
+
+/* ================================================================================ */
+/*  / end */
+/* ================================================================================ */
+

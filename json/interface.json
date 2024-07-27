@@ -1,0 +1,144 @@
+{
+	"languages": {
+		"en": {
+			"name": "English",
+			"flag": "flags/gb.svg"
+		},
+		"ua": {
+			"name": "Українська",
+			"flag": "flags/ua.svg"
+		}
+	},
+	"tagsIDs": {
+		"labelTableOrientation": {
+			"en": {
+				"text": "table horizontal",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "таблиця горизонтально",
+				"tooltip": ""
+			}
+		},
+		"buttonFillArray": {
+			"en": {
+				"text": "Fill array",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Заповнити масив",
+				"tooltip": ""
+			}
+		},
+		"buttonFillByConsecutiveNumbers": {
+			"en": {
+				"text": "Fill the array with consecutive numbers",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Заповнити масив послідовними числами",
+				"tooltip": ""
+			}
+		},
+		"buttonFillByRandomNumbers": {
+			"en": {
+				"text": "Fill the array with random numbers",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Заповнити масив випадковими числами",
+				"tooltip": ""
+			}
+		},
+		"buttonFillByConsecutiveLetters": {
+			"en": {
+				"text": "Fill the array with consecutive letters",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Заповнити масив послідовними літерами",
+				"tooltip": ""
+			}
+		},
+		"buttonFillByRandomLetters": {
+			"en": {
+				"text": "Fill the array with random letters",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Заповнити масив випадковими літерами",
+				"tooltip": ""
+			}
+		},
+		"pArrayPush": {
+			"en": {
+				"text": "This method adds one or more elements to the end of the array (from the right edge).",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Цей метод додає один елемент або кілька елементів в кінець масиву (з правого краю).",
+				"tooltip": ""
+			}
+		},
+		"pArrayPop": {
+			"en": {
+				"text": "This method removes the last (rightmost) element of an array. Only one item!!!",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Цей метод видаляє останній (крайній правий) елемент масиву. Лише один елемент!!!",
+				"tooltip": ""
+			}
+		},
+		"pArrayUnshift": {
+			"en": {
+				"text": "This method adds one or more elements to the beginning of the array (from the left edge).",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Цей метод додає один елемент або кілька елементів на початок масиву (з лівого краю).",
+				"tooltip": ""
+			}
+		},
+		"pArrayShift": {
+			"en": {
+				"text": "This method removes the initial (leftmost) element of an array. Only one item!!!",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Цей метод видаляє початковий (крайній лівий) елемент масиву. Лише один елемент!!!",
+				"tooltip": ""
+			}
+		},
+		"pArraySort": {
+			"en": {
+				"text": "This method sorts the array. If you call this method with no parameters, then all elements are sorted as if each element of the array were a string.",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "Цей метод виконує сортування масиву. Якщо виклтикати цей метод без параметрів, тоді всі елементи сортуються так, ніби кожен елемент масиву є рядком.",
+				"tooltip": ""
+			}
+		},
+		"pArrayReverse": {
+			"en": {
+				"text": "This method flips the array backwards.",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "",
+				"tooltip": "Цей метод перевертає масив задом на перед."
+			}
+		},
+		"!!!": {
+			"en": {
+				"text": "",
+				"tooltip": ""
+			},
+			"ua": {
+				"text": "",
+				"tooltip": ""
+			}
+		}
+	}
+}
